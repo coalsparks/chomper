@@ -10,6 +10,7 @@ Version 2: I then decided to get snazzy with it and skip the images and just dra
 
 ## Installation
 It's a single html file and four image files.  All five files need to be in the same directory.
+
 UPDATE:  Version 2 only uses the single html file.
 
 ## License
