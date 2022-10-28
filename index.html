@@ -1,79 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      div#guy {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        background: #ffff33;
-        left: 0px;
-        top: 0px;
-        z-index: 1;
-        border-radius: 50%;
-      }
-      div#eye {
-        width: 25px;
-        height: 25px;
-        background: #000000;
-        position: inherit;
-        left: 87px;
-        top: 25px;
-        z-index: 1;
-        border-radius: 50%;
-      }
-      div#mouth {
-        width: 200px;
-        height: 200px;
-        background: #fff;
-        position:inherit;
-        top: 0px;
-        left: 150px;
-        transform: rotate(45deg);
-        z-index: 3;
-      }
-    </style>
+    <link rel="stylesheet" href="pacman.css">
   </head>
   <body>
     <div id="guy">
       <div id="mouth"></div>
-      <div id ="eye"></div>
+      <div id="eye"></div>
     </div>
+    <div id="instructions">Click to start chomping!</div>
   </body>
 
-  <script>
-    var pos = 0;
-    var pageWidth = window.innerWidth;
-    var direction = 0;
-    var mouthState = 0;
-    var guy = document.getElementById('guy');
-    var mouth = document.getElementById('mouth');
-    var speed = 100;
+  <script type="text/javascript" src="pacman.js"></script>
+  <!--- Changes since last git update:
+  * movement is again click-to-start
+  * css and js are separated to different files
+  * added click to stop/click to restart listeners
+  * added instructions that update depending on the movement state
+  * the mouth diamond no longer displays outside of the guy div, and he is not displayed when outside window bounds
 
-    function Run() {
-      checkPageBounds();
-      if (mouthState) {
-        pos = pos + speed - (speed * 2 * direction);
-        guy.style.left = pos + 'px';
-      } // if the mouth is closed, move the character
-      
-      // move the mouth either toward or away, relative to the guy (depending on the direction)
-      let offset = 150 - (400 * direction) + (100 * mouthState); 
-      mouth.style.left = offset + "px";
-      mouthState = (mouthState + 1) % 2; // close or open the mouth
-
-      setTimeout(Run, 300);
-    }
-
-    Run();
-
-    function checkPageBounds() {
-      imgWidth = 200;
-      let pageWidth = window.innerWidth;
-      if (pos > pageWidth - imgWidth || pos < 0) {
-        direction = (direction + 1) % 2; // flip the direction
-        pos = pos < 0 ? 0: pageWidth - imgWidth; // make sure we don't run out of bounds!
-      }
-    }
-  </script>
-</html>
+--></html>

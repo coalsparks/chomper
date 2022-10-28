@@ -1,0 +1,41 @@
+div#guy {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: #ffff33;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  border-radius: 50%;
+  overflow:hidden;
+}
+div#eye {
+  width: 25px;
+  height: 25px;
+  background: #000000;
+  position: inherit;
+  left: 87px;
+  top: 25px;
+  z-index: 3;
+  border-radius: 50%;
+}
+div#mouth {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  position: inherit;
+  top: 0px;
+  left: 150px;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+div#instructions {
+  top: 50%;
+  z-index: 5;
+  position:absolute;
+  font-size: xx-large;
+  font-family: 'Courier New', Courier, monospace;
+}
+body {
+  overflow:hidden;
+}
