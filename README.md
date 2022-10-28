@@ -19,7 +19,7 @@ I then decided to get snazzy with it and skip the images and just draw shapes, a
 ## Installation
 It's a single html file and four image files.  All five files need to be in the same directory.
 
-* Version 2 only uses the single html file.
+* Version 2 only uses the single html file.  The image files are no longer necessary.
 * Version 3 has html, js and css files (one of each).  They need to be placed in the same directory.
 
 ## License
